@@ -1,0 +1,120 @@
+/* Balance Component Styles */
+.balance-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .balance-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: balanceFloat 8s ease-in-out infinite;
+  }
+  
+  .balance-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .balance-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .balance-form input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.9);
+    color: #2d3748;
+    outline: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .balance-form input::placeholder {
+    color: #718096;
+  }
+  
+  .balance-form input:focus {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .balance-form button {
+    padding: 1rem 2rem;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+  
+  .balance-form button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-color: rgba(255,255,255,0.5);
+  }
+  
+  .balance-form button:active {
+    transform: translateY(0);
+  }
+  
+  @keyframes balanceFloat {
+    0%, 100% { transform: translateX(0px) rotate(0deg); }
+    50% { transform: translateX(-20px) rotate(180deg); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .balance-container {
+      padding: 1.5rem;
+    }
+    
+    .balance-form {
+      flex-direction: column;
+      max-width: 100%;
+    }
+    
+    .balance-form button {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .balance-container {
+      padding: 1rem;
+    }
+    
+    .balance-container h3 {
+      font-size: 1.3rem;
+    }
+  }
