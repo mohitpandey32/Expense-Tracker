@@ -126,12 +126,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 ```
 
----
-
-### ✅ Notes:
-- Replace `yourusername`, `your-profile`, and `your-deployment-link.com` with your actual info
-- Add screenshots under a `screenshots/` folder if you'd like
-- You can style the README further with badges from [shields.io](https://shields.io)
-
-Would you like me to generate the **GitHub description**, `.gitignore`, or even a starter deploy link?
-```
